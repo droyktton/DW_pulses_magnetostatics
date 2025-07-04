@@ -1,11 +1,12 @@
 
-for h in 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0
+for h in 0.2 0.4 0.6 0.8 1.0 1.2 1.4 1.6
+#for h in 1.2 1.4 1.6 1.8 2.0
 do
 	for k0 in 0.000001 0.00001 0.0001 0.001 0.01
 	do
 		echo $h $k0
 		
-  		./cuerda 256 $h $k0 1.0 100.0 0.1
+  		./cuerda 256 $h $k0 1.0 100.0 0.2
 
   		mv monitor2.dat "monitor_k0_"$k0"_h_"$h".dat"
   		#mv monitor.dat monitor_k0_$k0.dat
