@@ -99,7 +99,7 @@ public:
         init_curand<<<(L+255)/256, 256>>>(devStates, 1234, L);
 
         //pulses_on = false;
-        tmax = 3 * tau0;
+        //tmax = 3 * tau0;
 
     }
 
@@ -184,6 +184,8 @@ int main(int argc, char **argv) {
     cuerda.DisAmp = atof(argv[4]); // 1.0
     cuerda.tau = atof(argv[5]); // 100.0
     cuerda.Temp = atof(argv[6]); // 0.0
+    cuerda.f1 = 0.01; // 0.4
+    cuerda.tmax = 10*cuerda.tau0; // 0.4
     int nrun = 1;
 
     std::cout << "L = " << L << std::endl;
